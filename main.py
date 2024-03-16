@@ -37,8 +37,8 @@ def decode(password: str) -> str:
 def encode(password: str) -> str:
     res = ""
     for char in password:
-        shift: int = (int(char) + 3) % 9  # (9+3) mod 10 = 2
-        res += chr(shift)
+        shift: int = (int(char) + 3) % 10  # (9+3) mod 10 = 2
+        res += str(shift)
     return res
 
 

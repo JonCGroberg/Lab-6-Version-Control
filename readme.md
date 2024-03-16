@@ -20,10 +20,23 @@ The password encoder should take an 8-digit password in string format, consistin
 password into the encoder, the program should store the encoded password in a new variable. Each digit of the password
 should be shifted up by 3 numbers.
 
+## Implementation:
+
+```python
+# 8-digit password in string format containing only integers
+# Returns new number with each digit being shifted up by 3 numbers
+def encode(password: str) -> str:
+    res = ""
+    for char in password:
+        shift: int = (int(char) + 3) % 10  # (9+3) mod 10 = 2
+        res += str(shift)
+    return res
+```
+
 ## Examples:
 
-"12345555" becomes "45678888" after encoding.
-"00009962" becomes "33332295" after encoding.
+`"12345555"` becomes `"45678888"` after encoding.
+`"00009962"` becomes `"33332295"`after encoding.
 
 ## Decoder
 
