@@ -29,8 +29,19 @@ def encode(password: str) -> str:
     res = ""
     for char in password:
         shift: int = (int(char) + 3) % 10  # (9+3) mod 10 = 2
-        res += str(shift)
+        res += str(shift)
     return res
+```
+
+## Testing:
+
+```python
+if __name__ == '__main__':
+    assert encode(
+        "00009962") == "33332295", f'encode("00009962") should return "33332295" but returns {encode("00009962")}'
+    assert decode(
+        "33332295") == "00009962", f'decode("33332295") should return "00009962" but returns {decode("33332295")}'
+
 ```
 
 ## Examples:
