@@ -29,7 +29,11 @@ def show_menu() -> None:
 
 
 def decode(password: str) -> str:
-    pass
+    result = ""
+    for digit in password:
+        new_digit = (int(digit) - 3) % 10
+        result += str(new_digit)
+    return result
 
 
 # 8-digit password in string format containing only integers
