@@ -1,4 +1,24 @@
 # Jonathan Groberg
+# UFID :11973817
+
+def decode(password: str) -> str:
+    result = ""
+    for digit in password:
+        new_digit = (int(digit) - 3) % 10
+        result += str(new_digit)
+    return result
+
+
+# Jonathan Groberg
+# 8-digit password in string format containing only integers
+# Returns new number with each digit being shifted up by 3 numbers
+def encode(password: str) -> str:
+    res = ""
+    for char in password:
+        shift: int = (int(char) + 3) % 10  # (9+3) mod 10 = 2
+        res += str(shift)
+    return res
+
 
 def show_menu() -> None:
     decoded, encoded = None, None  # init it 0,
@@ -26,24 +46,6 @@ def show_menu() -> None:
                 continue
         else:
             quit()
-
-
-def decode(password: str) -> str:
-    result = ""
-    for digit in password:
-        new_digit = (int(digit) - 3) % 10
-        result += str(new_digit)
-    return result
-
-
-# 8-digit password in string format containing only integers
-# Returns new number with each digit being shifted up by 3 numbers
-def encode(password: str) -> str:
-    res = ""
-    for char in password:
-        shift: int = (int(char) + 3) % 10  # (9+3) mod 10 = 2
-        res += str(shift)
-    return res
 
 
 if __name__ == '__main__':
