@@ -1,5 +1,5 @@
 # Jonathan Groberg
-
+# UFID :11973817
 
 def decode(password: str) -> str:
     pass
