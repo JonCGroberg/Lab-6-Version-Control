@@ -32,6 +32,7 @@ def decode(password: str) -> str:
     pass
 
 
+# Jonathan Groberg
 # 8-digit password in string format containing only integers
 # Returns new number with each digit being shifted up by 3 numbers
 def encode(password: str) -> str:
